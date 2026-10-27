@@ -1,0 +1,270 @@
+/* Clay Multiverse skins (house style, see ~/lemo-my-styles/clay-multiverse/STYLE.md).
+   Every reel jumps universes at each step: body[data-u] is set per card from timeline.universes.
+   holo   = home universe: one-hue hologram HUD on near-black (from lemo-opuscar hologram-hud)
+   crt    = amber phosphor terminal, scanlines (from ascii-crt)
+   arcade = 16-bit arcade cabinet, pixel type, hard shadows (OPUSCAR 98 #77 Million Dollar Baby)
+   neon   = snowy neon night, glass tubes, wet reflections (OPUSCAR 98 #97 Anora, #78 Crash)
+   Loaded after style.css; only overrides. */
+
+@font-face { font-family: 'VT323'; src: url(fonts/vt323-latin-400-normal.woff2) format('woff2'); }
+@font-face { font-family: 'Press Start 2P'; src: url(fonts/press-start-2p-latin-400-normal.woff2) format('woff2'); }
+@font-face { font-family: 'Monoton'; src: url(fonts/monoton-latin-400-normal.woff2) format('woff2'); }
+
+/* ---------- HUD furniture shared by every universe ---------- */
+#hud { position: absolute; inset: 0; pointer-events: none; z-index: 30; }
+#hud .br { position: absolute; width: 46px; height: 46px; border: 0 solid var(--u-hi); opacity: .9; }
+#hud .br.tl { left: 16px; top: 14px; border-width: 3px 0 0 3px; }
+#hud .br.tr { right: 16px; top: 14px; border-width: 3px 3px 0 0; }
+#hud .br.bl { left: 16px; bottom: 14px; border-width: 0 0 3px 3px; }
+#hud .br.brr { right: 16px; bottom: 14px; border-width: 0 3px 3px 0; }
+#hud .tag {
+  position: absolute; right: 70px; bottom: 6px; font: 400 26px/1 'VT323', monospace; letter-spacing: .12em;
+  color: var(--u-hi); text-shadow: 0 0 8px var(--u-glow); white-space: nowrap;
+}
+#hud .tag b { color: var(--u-acc); font-weight: 400; }
+
+/* =================================================================== HOLO */
+body[data-u="holo"] {
+  --u-bg: #04090D; --u-hi: #7FF3FF; --u-acc: #FF4FA8; --u-glow: rgba(79, 220, 255, .55);
+  --cream: #07141B; --paper: rgba(9, 26, 34, .92); --ink: #D9FBFF; --ink-2: #9ADDE8; --ink-3: #5E98A4;
+  --line: rgba(127, 243, 255, .16); --violet: #4FDCFF; --violet-2: #9AF0FF; --violet-soft: rgba(79, 220, 255, .12);
+  --cyan: #FF4FA8; --green: #3DFF9A; --green-soft: rgba(61, 255, 154, .12); --red: #FF5A6E; --red-soft: rgba(255, 90, 110, .14);
+  --amber: #FFB547; --amber-soft: rgba(255, 181, 71, .14);
+}
+body[data-u="holo"] #bg { background: radial-gradient(700px 520px at 50% 46%, #0B2230, var(--u-bg) 72%); }
+body[data-u="holo"] #bg::after { background-image: radial-gradient(rgba(127, 243, 255, .26) 1.3px, transparent 1.7px); opacity: .7; }
+body[data-u="holo"] .card {
+  border-radius: 10px; background: linear-gradient(180deg, rgba(10, 30, 40, .94), rgba(4, 13, 19, .96));
+  box-shadow: 0 0 0 2px rgba(127, 243, 255, .55), 0 0 40px -6px rgba(79, 220, 255, .45), inset 0 0 80px rgba(79, 220, 255, .06);
+}
+body[data-u="holo"] .card::before { inset: 10px; border-radius: 4px; border: 1px dashed rgba(127, 243, 255, .18); }
+body[data-u="holo"] .title { font: 700 70px/1.02 var(--sans); letter-spacing: -.02em; text-transform: none; color: #EFFFFF; text-shadow: 0 0 18px rgba(79, 220, 255, .45); }
+body[data-u="holo"] .title em { font-style: normal; color: var(--u-acc); text-shadow: 0 0 16px rgba(255, 79, 168, .7); }
+body[data-u="holo"] .pill { background: transparent; color: var(--u-hi); box-shadow: inset 0 0 0 2px var(--u-hi); border-radius: 6px; }
+
+/* =================================================================== CRT */
+body[data-u="crt"] {
+  --u-bg: #0E0700; --u-hi: #FFB000; --u-acc: #FFE7A8; --u-glow: rgba(255, 176, 0, .6);
+  --cream: #140A01; --paper: #120900; --ink: #FFC233; --ink-2: #E09A10; --ink-3: #9A6508;
+  --line: rgba(255, 176, 0, .22); --violet: #FFE7A8; --violet-2: #FFD27A; --violet-soft: rgba(255, 176, 0, .14);
+  --cyan: #FFE7A8; --green: #FFD27A; --green-soft: rgba(255, 176, 0, .12); --red: #FF6A2A; --red-soft: rgba(255, 106, 42, .16);
+  --amber: #FFB000; --amber-soft: rgba(255, 176, 0, .12);
+  --sans: 'VT323', monospace; --mono: 'VT323', monospace; --serif: 'VT323', monospace;
+}
+body[data-u="crt"] #bg { background: radial-gradient(760px 560px at 50% 48%, #2A1500, var(--u-bg) 75%); }
+body[data-u="crt"] #bg::after { display: none; }
+body[data-u="crt"] #stage::after { /* scanlines + glass curvature vignette */
+  content: ''; position: absolute; inset: 0; z-index: 25; pointer-events: none;
+  background:
+    repeating-linear-gradient(180deg, rgba(0, 0, 0, .28) 0 2px, transparent 2px 4px),
+    radial-gradient(1200px 1000px at 50% 50%, transparent 62%, rgba(0, 0, 0, .7) 100%);
+}
+body[data-u="crt"] .card { border-radius: 34px; background: #120900; box-shadow: 0 0 0 3px rgba(255, 176, 0, .55), 0 0 60px -10px rgba(255, 176, 0, .5), inset 0 0 120px rgba(255, 140, 0, .1); }
+body[data-u="crt"] .card::before { border-color: rgba(255, 176, 0, .15); }
+body[data-u="crt"] .card, body[data-u="crt"] .card * { text-shadow: 0 0 6px rgba(255, 176, 0, .55); }
+body[data-u="crt"] .title { font: 400 96px/.95 'VT323', monospace; letter-spacing: .01em; text-transform: uppercase; color: #FFC233; }
+body[data-u="crt"] .title em { font-style: normal; color: #FFF1C8; }
+body[data-u="crt"] .pill { background: #FFB000; color: #120900; text-shadow: none; font: 400 34px/1 'VT323', monospace; border-radius: 0; }
+body[data-u="crt"] .pill .dot { background: #120900; box-shadow: none; }
+body[data-u="crt"] .term-line, body[data-u="crt"] .feed-meta, body[data-u="crt"] .feed-n, body[data-u="crt"] .feed-name { font-size: 36px; }
+body[data-u="crt"] .feed-name, body[data-u="crt"] .total .num { color: #FFE7A8; }
+body[data-u="crt"] .feed-meta, body[data-u="crt"] .total .lbl { color: #C98A10; }
+body[data-u="crt"] .logo { border-radius: 0; background: #FFB000 !important; color: #120900; }
+body[data-u="crt"] .feed-row { background: rgba(255, 176, 0, .05); box-shadow: inset 0 0 0 2px rgba(255, 176, 0, .2); border-radius: 0; }
+
+/* =================================================================== ARCADE */
+body[data-u="arcade"] {
+  --u-bg: #1D1435; --u-hi: #F5C53A; --u-acc: #FF3B5C; --u-glow: rgba(245, 197, 58, .5);
+  --cream: #2A1D4E; --paper: #140D29; --ink: #FFFFFF; --ink-2: #CFC3FF; --ink-3: #8E7FC9;
+  --line: rgba(255, 255, 255, .18); --violet: #F5C53A; --violet-2: #FFE07A; --violet-soft: rgba(245, 197, 58, .18);
+  --cyan: #3AF5E0; --green: #3DFF6E; --green-soft: rgba(61, 255, 110, .16); --red: #FF3B5C; --red-soft: rgba(255, 59, 92, .2);
+  --sans: 'VT323', monospace; --mono: 'VT323', monospace; --serif: 'Press Start 2P', monospace;
+}
+body[data-u="arcade"] #bg {
+  background:
+    linear-gradient(180deg, transparent 70%, rgba(0, 0, 0, .5) 70%),
+    repeating-linear-gradient(90deg, #241848 0 60px, #1D1435 60px 120px);
+  image-rendering: pixelated;
+}
+body[data-u="arcade"] #bg::after { display: none; }
+body[data-u="arcade"] #stage::after {
+  content: ''; position: absolute; inset: 0; z-index: 25; pointer-events: none;
+  background: repeating-linear-gradient(180deg, rgba(0, 0, 0, .18) 0 3px, transparent 3px 6px);
+}
+body[data-u="arcade"] .card {
+  border-radius: 0; background: #2A1D4E;
+  box-shadow: 0 0 0 6px #000, 0 0 0 12px #F5C53A, 0 0 0 18px #000, 18px 18px 0 18px rgba(0, 0, 0, .55);
+}
+body[data-u="arcade"] .card::before { border-radius: 0; border: 4px solid rgba(255, 255, 255, .08); }
+body[data-u="arcade"] .title { font: 400 50px/1.25 'Press Start 2P', monospace; letter-spacing: 0; color: #fff; text-shadow: 5px 5px 0 #000; white-space: normal; }
+body[data-u="arcade"] .title em { font-style: normal; color: #F5C53A; }
+body[data-u="arcade"] .pill { font: 400 22px/1 'Press Start 2P', monospace; background: #FF3B5C; color: #fff; border-radius: 0; box-shadow: 4px 4px 0 #000; }
+body[data-u="arcade"] .seg, body[data-u="arcade"] .seg i { border-radius: 0; }
+body[data-u="arcade"] .seg { height: 22px; background: #000; box-shadow: inset 0 0 0 3px #fff; }
+body[data-u="arcade"] .seg i, body[data-u="arcade"] .seg.cur i { background: #F5C53A; }
+body[data-u="arcade"] .win, body[data-u="arcade"] .log, body[data-u="arcade"] .json, body[data-u="arcade"] .sheet, body[data-u="arcade"] .chip { border-radius: 0 !important; }
+body[data-u="arcade"] .win { border: 4px solid #000; box-shadow: 8px 8px 0 #000; }
+body[data-u="arcade"] .sheet { background: #fff; box-shadow: 0 0 0 4px #000, 6px 6px 0 4px #000; }
+body[data-u="arcade"] .pdf .nm { font-size: 34px; color: #fff; }
+body[data-u="arcade"] .log, body[data-u="arcade"] .json { font-size: 34px; background: #000; }
+
+/* =================================================================== NEON */
+body[data-u="neon"] {
+  --u-bg: #1E1838; --u-hi: #FF4FA8; --u-acc: #4FDCFF; --u-glow: rgba(255, 79, 168, .6);
+  --cream: #15112A; --paper: rgba(26, 21, 52, .92); --ink: #FFF2FA; --ink-2: #D9C8F0; --ink-3: #9C8CC0;
+  --line: rgba(255, 79, 168, .2); --violet: #FF4FA8; --violet-2: #FF8CC6; --violet-soft: rgba(255, 79, 168, .16);
+  --cyan: #4FDCFF; --green: #3DFF9A; --green-soft: rgba(61, 255, 154, .14); --red: #FF9A2E; --red-soft: rgba(255, 154, 46, .16);
+}
+body[data-u="neon"] #bg {
+  background:
+    linear-gradient(180deg, transparent 74%, rgba(255, 79, 168, .10) 74%, rgba(79, 220, 255, .06) 100%),
+    radial-gradient(800px 500px at 50% 30%, #2B2155, var(--u-bg) 75%);
+}
+body[data-u="neon"] #bg::after { /* snow */
+  background-image: radial-gradient(rgba(255, 255, 255, .55) 1.4px, transparent 2px), radial-gradient(rgba(255, 200, 235, .35) 1px, transparent 1.6px);
+  background-size: 90px 110px, 53px 67px; background-position: 0 0, 20px 30px; mask-image: none; opacity: .5;
+}
+body[data-u="neon"] .card {
+  border-radius: 26px; background: linear-gradient(180deg, rgba(30, 24, 60, .93), rgba(16, 12, 34, .96));
+  box-shadow: 0 0 0 3px #FFE1F0, 0 0 0 6px #FF4FA8, 0 0 30px 4px rgba(255, 79, 168, .75), 0 0 90px 10px rgba(255, 79, 168, .35), 0 40px 60px -20px #000;
+}
+body[data-u="neon"] .card::before { border: 2px solid rgba(79, 220, 255, .55); box-shadow: 0 0 14px rgba(79, 220, 255, .6); }
+body[data-u="neon"] .title { font: 400 74px/1.1 'Monoton', var(--sans); letter-spacing: .02em; color: #FFE6F3; text-shadow: 0 0 6px #fff, 0 0 18px #FF4FA8, 0 0 42px #FF4FA8; white-space: normal; }
+body[data-u="neon"] .title em { font-style: normal; color: #E6FBFF; text-shadow: 0 0 6px #fff, 0 0 18px #4FDCFF, 0 0 42px #4FDCFF; }
+body[data-u="neon"] .pill { background: transparent; color: #FFE6F3; box-shadow: inset 0 0 0 3px #FF4FA8, 0 0 16px #FF4FA8; }
+
+/* ---------- light surfaces that style.css hard-codes as white ---------- */
+body:not([data-u="arcade"]) .mail-row, body:not([data-u="arcade"]) .q-row, body:not([data-u="arcade"]) .field,
+body:not([data-u="arcade"]) .tile, body:not([data-u="arcade"]) .d-row, body[data-u] .sticker {
+  background: rgba(255, 255, 255, .04); box-shadow: inset 0 0 0 2px var(--line);
+}
+body[data-u="arcade"] .field, body[data-u="arcade"] .tile, body[data-u="arcade"] .d-row, body[data-u="arcade"] .mail-row {
+  background: #140D29; border-radius: 0; box-shadow: inset 0 0 0 3px #fff;
+}
+body[data-u="arcade"] .field .val, body[data-u="arcade"] .field .lab { font-size: 34px; }
+body[data-u] .sticker { background: var(--cream); box-shadow: 0 0 0 2px var(--u-hi), 0 0 30px -4px var(--u-glow); }
+body[data-u] .sheet { background: #F4F0FF; }
+body[data-u] .posting .t { color: var(--ink); }
+body[data-u] .submit { background: var(--violet); color: #0B0716; box-shadow: 0 6px 0 rgba(0, 0, 0, .6), 0 0 24px var(--u-glow); }
+body[data-u] .sendbtn { background: var(--violet); color: #0B0716; box-shadow: 0 6px 0 rgba(0, 0, 0, .6), 0 0 24px var(--u-glow); }
+body[data-u] .cta { background: #000; box-shadow: 0 0 0 3px var(--u-hi), 0 0 30px var(--u-glow); }
+body[data-u] .cta .kw { background: var(--u-acc); color: #000; }
+body[data-u] .end .kicker { color: var(--u-hi); }
+body[data-u] .follow { color: var(--ink-2); }
+body[data-u] .end h2 { font: 700 76px/1.05 var(--sans); color: #fff; }
+body[data-u] .end h2 em { font-style: normal; color: var(--u-acc); text-shadow: 0 0 20px var(--u-acc); }
+body[data-u] .stamp { mix-blend-mode: normal; background: rgba(0, 0, 0, .55); }
+
+/* fixes after first stills: titles must stay on one line; dark code strips everywhere */
+body[data-u="arcade"] .title { font-size: 33px !important; white-space: nowrap; margin-top: 26px; }
+body[data-u="neon"] .title { font-size: 56px !important; white-space: nowrap; }
+body[data-u] .term-strip, body[data-u] .log, body[data-u] .json { background: rgba(0, 0, 0, .55); color: var(--ink); box-shadow: inset 0 0 0 2px var(--line); }
+body[data-u] .json .k { color: var(--u-hi); }
+body[data-u] .json .s { color: var(--u-acc); }
+
+/* =================================================================== SILENT (1927 silent film, reel 02 v2)
+   An intertitle card: black plate, cream serif, ornate double rule. compose.py turns the whole frame
+   sepia with grain, flicker and scratches, so this skin only has to read as print on black. */
+body[data-u="silent"] {
+  --u-bg: #0B0906; --u-hi: #EDE3CC; --u-acc: #FFFFFF; --u-glow: rgba(237, 227, 204, .35);
+  --cream: #0B0906; --paper: #0B0906; --ink: #EDE3CC; --ink-2: #C9BFA8; --ink-3: #8C8472;
+  --line: rgba(237, 227, 204, .25); --violet: #EDE3CC; --violet-2: #FFFFFF; --violet-soft: rgba(237, 227, 204, .1);
+  --cyan: #FFFFFF; --green: #EDE3CC; --green-soft: rgba(237, 227, 204, .1); --red: #FFFFFF; --red-soft: rgba(255, 255, 255, .12);
+  --amber: #EDE3CC; --amber-soft: rgba(237, 227, 204, .1);
+  --sans: 'Fraunces', Georgia, serif; --mono: 'Fraunces', Georgia, serif; --serif: 'Fraunces', Georgia, serif;
+}
+body[data-u="silent"] #bg { background: radial-gradient(760px 600px at 50% 50%, #2A251C, #050403 78%); }
+body[data-u="silent"] #bg::after { display: none; }
+body[data-u="silent"] .card {
+  border-radius: 0; background: #0B0906;
+  box-shadow: 0 0 0 3px #EDE3CC, 0 0 0 9px #0B0906, 0 0 0 11px #EDE3CC, 0 30px 60px -10px #000;
+}
+body[data-u="silent"] .card::before { inset: 22px; border-radius: 0; border: 1px solid rgba(237, 227, 204, .45); }
+body[data-u="silent"] .title { font: italic 500 74px/1.05 'Fraunces', serif; letter-spacing: 0; text-transform: none; color: #F4ECD8; text-align: center; }
+body[data-u="silent"] .title em { font-style: italic; color: #fff; text-decoration: underline 2px; text-underline-offset: 10px; }
+body[data-u="silent"] .title::before, body[data-u="silent"] .title::after { content: ' ❦ '; font-size: .5em; vertical-align: middle; opacity: .8; }
+body[data-u="silent"] .pill { background: transparent; color: #EDE3CC; box-shadow: inset 0 0 0 2px #EDE3CC; border-radius: 0; font: italic 500 26px/1 'Fraunces', serif; letter-spacing: .14em; }
+body[data-u="silent"] .pill .dot { background: #EDE3CC; box-shadow: none; }
+body[data-u="silent"] .seg, body[data-u="silent"] .seg i { border-radius: 0; }
+body[data-u="silent"] .seg i { background: #EDE3CC; }
+body[data-u="silent"] .win { border-radius: 0; background: transparent; box-shadow: none; }
+body[data-u="silent"] .win .bar { background: transparent; border-bottom: 1px solid rgba(237, 227, 204, .4); }
+body[data-u="silent"] .win .lights { display: none; }
+body[data-u="silent"] .win .addr { font: italic 500 24px/1 'Fraunces', serif; color: #C9BFA8; }
+body[data-u="silent"] .term-line { font: 500 34px/1.15 'Fraunces', serif; color: #EDE3CC; }
+body[data-u="silent"] .term-line .muted { font-style: italic; }
+body[data-u="silent"] .prompt { color: #fff; }
+body[data-u="silent"] .chip { border-radius: 0; background: transparent !important; color: #EDE3CC !important; box-shadow: inset 0 0 0 2px #EDE3CC; font-family: 'Fraunces', serif; font-style: italic; }
+body[data-u="silent"] .chip.ink { background: #EDE3CC !important; color: #0B0906 !important; }
+body[data-u="silent"] .sticker { background: #0B0906 !important; box-shadow: 0 0 0 3px #EDE3CC, 0 0 0 8px #0B0906, 0 0 0 10px #EDE3CC !important; border-radius: 0; }
+body[data-u="silent"] #hud .tag { font: italic 500 24px/1 'Fraunces', serif; letter-spacing: .1em; text-shadow: none; }
+
+/* =================================================================== VHS (1987 tape, reel 02 v2)
+   Uses the neon card skin (data-u="neon") plus data-v="vhs": camcorder OSD and tracking lines.
+   compose.py adds chroma bleed, tape noise and a rolling tracking band to the whole frame. */
+body[data-v="vhs"] #stage::after {
+  content: ''; position: absolute; inset: 0; z-index: 25; pointer-events: none;
+  background: repeating-linear-gradient(180deg, rgba(255, 255, 255, .035) 0 1px, transparent 1px 3px);
+}
+#osd { display: none; }
+body[data-v="vhs"] #osd { display: block; position: absolute; inset: 0; z-index: 31; pointer-events: none; font: 400 34px/1 'VT323', monospace; color: #fff; text-shadow: 3px 0 0 rgba(255, 0, 80, .7), -3px 0 0 rgba(0, 200, 255, .7); }
+#osd .play { position: absolute; left: 76px; top: 0; }
+#osd .sp { position: absolute; right: 76px; top: 0; }
+#osd .date { position: absolute; left: 76px; bottom: 0; font-size: 30px; }
+
+/* =================================================================== COMIC (1962 comic book, replaces VHS from reel 03 v2)
+   Ian 2026-10-27: VHS read as a low-quality copy of home. Comic must look unmistakably different:
+   cream newsprint, Ben-Day halftone dots, thick black ink lines, flat red/yellow/blue, Bangers lettering.
+   compose.py adds posterized flat colour, ink edges and a halftone screen to the whole frame. */
+@font-face { font-family: 'Bangers'; src: url(fonts/bangers-latin-400-normal.woff2) format('woff2'); }
+body[data-u="comic"] {
+  --u-bg: #FFD400; --u-hi: #111; --u-acc: #E8282B; --u-glow: rgba(0, 0, 0, 0);
+  --cream: #FFF8E1; --paper: #FFF8E1; --ink: #111111; --ink-2: #2B2B2B; --ink-3: #555;
+  --line: #111; --violet: #1E64D8; --violet-2: #4F8BF0; --violet-soft: rgba(30, 100, 216, .14);
+  --cyan: #1E64D8; --green: #138A3E; --green-soft: rgba(19, 138, 62, .14); --red: #E8282B; --red-soft: rgba(232, 40, 43, .14);
+  --amber: #B07A00; --amber-soft: rgba(255, 212, 0, .35);
+}
+body[data-u="comic"] #bg {
+  background:
+    radial-gradient(circle, rgba(232, 40, 43, .55) 3.2px, transparent 3.8px) 0 0 / 16px 16px,
+    #FFD400;
+}
+body[data-u="comic"] #bg::after { display: none; }
+body[data-u="comic"] .card {
+  border-radius: 0; background: #FFF8E1;
+  box-shadow: 0 0 0 7px #111, 16px 16px 0 7px #111;
+}
+body[data-u="comic"] .card::before { border-radius: 0; border: 0; inset: 0;
+  background: radial-gradient(circle, rgba(30, 100, 216, .10) 2px, transparent 2.6px) 0 0 / 12px 12px; }
+body[data-u="comic"] .card, body[data-u="comic"] .card * { text-shadow: none !important; }
+body[data-u="comic"] .title { font: 400 84px/1 'Bangers', sans-serif !important; letter-spacing: .03em; color: #111; text-transform: uppercase; white-space: nowrap;
+  -webkit-text-stroke: 0; }
+body[data-u="comic"] .title em { font-style: normal; color: #E8282B; -webkit-text-stroke: 2px #111; }
+body[data-u="comic"] .pill { font: 400 34px/1 'Bangers', sans-serif; letter-spacing: .06em; background: #FFD400; color: #111; border-radius: 0;
+  box-shadow: 0 0 0 4px #111, 5px 5px 0 4px #111; }
+body[data-u="comic"] .pill .dot { background: #E8282B; box-shadow: none; border-radius: 50%; }
+body[data-u="comic"] .seg, body[data-u="comic"] .seg i { border-radius: 0; }
+body[data-u="comic"] .seg { height: 18px; background: #fff; box-shadow: inset 0 0 0 3px #111; }
+body[data-u="comic"] .seg i, body[data-u="comic"] .seg.cur i { background: #1E64D8; }
+body[data-u="comic"] .win { border-radius: 0; background: #fff; box-shadow: 0 0 0 5px #111, 8px 8px 0 5px #111; }
+body[data-u="comic"] .win .bar { background: #FFD400; border-bottom: 5px solid #111; }
+body[data-u="comic"] .win .lights { display: none; }
+body[data-u="comic"] .win .addr { background: transparent; color: #111; font: 400 30px/1 'Bangers', sans-serif; letter-spacing: .06em; }
+body[data-u="comic"] .term-line { font: 400 34px/1.1 'Bangers', sans-serif; letter-spacing: .04em; color: #111; }
+body[data-u="comic"] .chip { border-radius: 0 !important; font: 400 28px/1 'Bangers', sans-serif; letter-spacing: .05em; box-shadow: 0 0 0 3px #111, 4px 4px 0 3px #111; }
+body[data-u="comic"] .chip.ink { background: #111; color: #FFD400; }
+body[data-u="comic"] .chip.green { background: #7BE495; color: #111; }
+body[data-u="comic"] .chip.red { background: #E8282B; color: #fff; }
+body[data-u="comic"] .field, body[data-u="comic"] .tile {
+  background: #fff; border-radius: 0; box-shadow: 0 0 0 4px #111 !important;
+}
+body[data-u="comic"] .field .lab, body[data-u="comic"] .field .val { font-family: 'Bangers', sans-serif; letter-spacing: .04em; color: #111; font-size: 32px; }
+body[data-u="comic"] .tile .n { font: 400 84px/1 'Bangers', sans-serif; color: #E8282B; -webkit-text-stroke: 2px #111; }
+body[data-u="comic"] .tile .l { font: 400 28px/1 'Bangers', sans-serif; color: #111; letter-spacing: .05em; }
+body[data-u="comic"] .term-strip { background: #111 !important; color: #FFD400 !important; border-radius: 0; font-size: 26px; }
+body[data-u="comic"] .sticker { background: #fff !important; border-radius: 0 !important; box-shadow: 0 0 0 5px #111, 8px 8px 0 5px #111 !important; }
+body[data-u="comic"] .stamp { background: #FFD400 !important; color: #E8282B !important; font-family: 'Bangers', sans-serif !important; letter-spacing: .04em;
+  box-shadow: 0 0 0 5px #111, 7px 7px 0 5px #111; border: 0 !important; -webkit-text-stroke: 2px #111; }
+body[data-u="comic"] #hud .tag { font: 400 30px/1 'Bangers', sans-serif; letter-spacing: .08em; color: #111; }
+body[data-u="comic"] #hud .tag b { color: #E8282B; }
+body[data-u="comic"] #hud .br { border-color: #111; }

@@ -1,0 +1,26 @@
+# media and generated stages
+audio/
+renders/
+ui/top*.mp4
+ui/[0-9][0-9]-timeline.json
+ui/stills/
+characters/*.png
+characters/*.jpg
+models/
+*.mp4
+*.mov
+*.wav
+*.mp3
+
+# private config
+config/cast.json
+.env
+.env.*
+!.env.example
+
+# tooling
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store

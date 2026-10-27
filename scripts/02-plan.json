@@ -1,0 +1,236 @@
+{
+ "1": {
+  "src": "ian"
+ },
+ "2": {
+  "src": "omega",
+  "key": "close-neutral",
+  "expr": [
+   [
+    0,
+    "flat"
+   ]
+  ],
+  "look": 0
+ },
+ "3": {
+  "src": "ian"
+ },
+ "4": {
+  "src": "omega",
+  "key": "close-folded",
+  "expr": [
+   [
+    0,
+    "dry"
+   ],
+   [
+    1.0,
+    "smug"
+   ]
+  ],
+  "look": 0
+ },
+ "5": {
+  "src": "omega",
+  "key": "close-folded",
+  "expr": [
+   [
+    0,
+    "skeptic"
+   ]
+  ],
+  "look": -2
+ },
+ "6": {
+  "src": "omega",
+  "key": "wide",
+  "expr": [
+   [
+    0,
+    "sigh"
+   ],
+   [
+    0.7,
+    "flat"
+   ],
+   [
+    1.3,
+    "warm"
+   ],
+   [
+    3.6,
+    "explain"
+   ]
+  ],
+  "look": 0
+ },
+ "7": {
+  "src": "omega",
+  "key": "close-present",
+  "expr": [
+   [
+    0,
+    "explain"
+   ]
+  ],
+  "look": 0
+ },
+ "8": {
+  "src": "omega",
+  "key": "close-neutral",
+  "expr": [
+   [
+    0,
+    "listen"
+   ],
+   [
+    1.2,
+    "flat"
+   ]
+  ],
+  "look": -2
+ },
+ "9": {
+  "src": "omega",
+  "key": "close-hips",
+  "expr": [
+   [
+    0,
+    "flat"
+   ],
+   [
+    1.7,
+    "smug"
+   ]
+  ],
+  "look": 0
+ },
+ "10": {
+  "src": "omega",
+  "key": "close-present",
+  "expr": [
+   [
+    0,
+    "explain"
+   ]
+  ],
+  "look": 0
+ },
+ "11": {
+  "src": "ian"
+ },
+ "12": {
+  "src": "omega",
+  "key": "close-folded",
+  "expr": [
+   [
+    0,
+    "flat"
+   ],
+   [
+    2.6,
+    "dry"
+   ]
+  ],
+  "look": 0
+ },
+ "13": {
+  "src": "omega",
+  "key": "wide",
+  "expr": [
+   [
+    0,
+    "explain"
+   ]
+  ],
+  "look": 0
+ },
+ "14": {
+  "src": "ian"
+ },
+ "15": {
+  "src": "omega",
+  "key": "close-folded",
+  "expr": [
+   [
+    0,
+    "firm"
+   ],
+   [
+    2.8,
+    "dry"
+   ]
+  ],
+  "look": 0
+ },
+ "16": {
+  "src": "omega",
+  "key": "close-neutral",
+  "expr": [
+   [
+    0,
+    "skeptic"
+   ]
+  ],
+  "look": -2
+ },
+ "17": {
+  "src": "omega",
+  "key": "close-hips",
+  "expr": [
+   [
+    0,
+    "dry"
+   ],
+   [
+    0.6,
+    "firm"
+   ]
+  ],
+  "look": 0
+ },
+ "18": {
+  "src": "ian"
+ },
+ "19": {
+  "src": "omega",
+  "key": "close-hips",
+  "expr": [
+   [
+    0,
+    "smug"
+   ],
+   [
+    2.3,
+    "dry"
+   ]
+  ],
+  "look": 0
+ },
+ "20": {
+  "src": "ian"
+ },
+ "21": {
+  "src": "omega",
+  "key": "close-folded",
+  "expr": [
+   [
+    0,
+    "flat"
+   ]
+  ],
+  "look": 0
+ },
+ "22": {
+  "src": "omega",
+  "key": "close-present",
+  "expr": [
+   [
+    0,
+    "warm"
+   ]
+  ],
+  "look": 0
+ }
+}

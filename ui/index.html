@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>omega-reels · top track</title>
+<meta name="viewport" content="width=1080, height=900">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="universe.css">
+</head>
+<body>
+<div id="stage" aria-label="Reel top track">
+  <div id="bg"></div>
+  <div id="layer-exit" class="layer"></div>
+  <div id="layer-main" class="layer"></div>
+  <div id="grain"></div>
+  <div id="hud"><i class="br tl"></i><i class="br tr"></i><i class="br bl"></i><i class="br brr"></i><div class="tag" id="hud-tag"></div></div>
+  <div id="osd"><span class="play">PLAY ▶</span><span class="sp">SP</span><span class="date" id="osd-date"></span></div>
+</div>
+<div id="scrub" hidden>
+  <input id="scrub-range" type="range" min="0" max="60" step="0.0333" value="0">
+  <span id="scrub-t">0.00s</span>
+</div>
+<script>
+  // One scenes file per reel: ui/reels/<id>.js (copied from 01.js and rewritten for each repo).
+  document.write('<script src="reels/' + (new URLSearchParams(location.search).get('reel') || '01') + '.js"><\/script>');
+</script>
+</body>
+</html>

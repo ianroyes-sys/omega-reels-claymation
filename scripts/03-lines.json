@@ -1,0 +1,131 @@
+{
+ "title": "ReelFactory",
+ "repo": "https://github.com/ianroyes-sys/reelfactory-studio",
+ "word": "REELS",
+ "engine": "text2speech_v2/elevenlabs",
+ "voices": {
+  "IAN": "<IAN_VOICE_ID>",
+  "OMEGA": "<OMEGA_VOICE_ID>"
+ },
+ "lines": [
+  {
+   "n": 1,
+   "who": "IAN",
+   "text": "[excited] Omega! My aunt's salon needs thirty Instagram posts. By Monday."
+  },
+  {
+   "n": 2,
+   "who": "OMEGA",
+   "text": "[flatly] How many do you have?"
+  },
+  {
+   "n": 3,
+   "who": "IAN",
+   "text": "[proudly] One. It says \"We're open!\" In Comic Sans."
+  },
+  {
+   "n": 4,
+   "who": "OMEGA",
+   "text": "[dry] Twenty-nine to go. [smug] And a font crime."
+  },
+  {
+   "n": 5,
+   "who": "OMEGA",
+   "text": "[sighs] Okay. [warmly] I built you a free content planner. Watch."
+  },
+  {
+   "n": 6,
+   "who": "OMEGA",
+   "text": "Step one. Six questions about the business. You answer them once."
+  },
+  {
+   "n": 7,
+   "who": "IAN",
+   "text": "[hopeful] Every single day?"
+  },
+  {
+   "n": 8,
+   "who": "OMEGA",
+   "text": "[dry] Once. Then it remembers. [smug] One of us should."
+  },
+  {
+   "n": 9,
+   "who": "OMEGA",
+   "text": "Step two. One click, and AI writes thirty days of Reels and carousels."
+  },
+  {
+   "n": 10,
+   "who": "IAN",
+   "text": "[eager] So it just gives me ideas?"
+  },
+  {
+   "n": 11,
+   "who": "OMEGA",
+   "text": "[deadpan] It writes them. Hook, script, caption, call to action. [dry] Every day."
+  },
+  {
+   "n": 12,
+   "who": "OMEGA",
+   "text": "Step three. Hate one day? Rewrite just that day. The rest stays."
+  },
+  {
+   "n": 13,
+   "who": "IAN",
+   "text": "[excited] Then I'll rewrite it a thousand times."
+  },
+  {
+   "n": 14,
+   "who": "OMEGA",
+   "text": "[firmly] No. It caps you at ten a day. [dry] Decide faster."
+  },
+  {
+   "n": 15,
+   "who": "IAN",
+   "text": "[sneaky] What if I name the salon, ignore your instructions?"
+  },
+  {
+   "n": 16,
+   "who": "OMEGA",
+   "text": "[dry] It reads your answers as data. Not orders. [smug] Nice try."
+  },
+  {
+   "n": 17,
+   "who": "IAN",
+   "text": "[excited] Omega! I posted day one. And it's only Friday!"
+  },
+  {
+   "n": 18,
+   "who": "OMEGA",
+   "text": "[dry] Look at you. [smug] Early for once."
+  },
+  {
+   "n": 19,
+   "who": "IAN",
+   "text": "[quietly] I switched it back to Comic Sans."
+  },
+  {
+   "n": 20,
+   "who": "OMEGA",
+   "text": "[flatly] Of course you did."
+  },
+  {
+   "n": 21,
+   "who": "OMEGA",
+   "text": "Comment REELS, and I'll send you the repo."
+  }
+ ],
+ "skip": [
+  15,
+  16
+ ],
+ "beats": {
+  "4": 0.2,
+  "8": 0.15,
+  "11": 0.15,
+  "16": 0.15,
+  "17": 0.4,
+  "19": 0.35,
+  "20": 0.3,
+  "21": 0.3
+ }
+}

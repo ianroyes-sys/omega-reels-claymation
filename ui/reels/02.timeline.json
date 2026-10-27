@@ -1,0 +1,323 @@
+{
+ "placeholder": true,
+ "fps": 30,
+ "poseFps": 12,
+ "width": 1080,
+ "height": 900,
+ "cues": [
+  {
+   "id": "coldopen",
+   "start": 0,
+   "end": 1,
+   "card": "clients",
+   "state": {
+    "phase": "cold"
+   }
+  },
+  {
+   "id": "1",
+   "line": 1,
+   "speaker": "IAN",
+   "text": "Omega! Three new clients want iPhone apps. Same week.",
+   "start": 1.0,
+   "end": 3.4,
+   "card": "clients",
+   "state": {
+    "phase": "clients"
+   }
+  },
+  {
+   "id": "2",
+   "line": 2,
+   "speaker": "OMEGA",
+   "text": "And your plan?",
+   "start": 3.4,
+   "end": 5.8,
+   "card": "clients",
+   "state": {
+    "phase": "ask"
+   }
+  },
+  {
+   "id": "3",
+   "line": 3,
+   "speaker": "IAN",
+   "text": "Copy the last app. Change the logo.",
+   "start": 5.8,
+   "end": 8.2,
+   "card": "clients",
+   "state": {
+    "phase": "copy"
+   }
+  },
+  {
+   "id": "4",
+   "line": 4,
+   "speaker": "OMEGA",
+   "text": "A church, a dentist and a bakery. One app.",
+   "start": 8.2,
+   "end": 10.6,
+   "card": "clients",
+   "state": {
+    "phase": "types"
+   }
+  },
+  {
+   "id": "5",
+   "line": 5,
+   "speaker": "IAN",
+   "text": "People like sermons.",
+   "start": 10.6,
+   "end": 13.0,
+   "card": "clients",
+   "state": {
+    "phase": "defend"
+   }
+  },
+  {
+   "id": "6",
+   "line": 6,
+   "speaker": "OMEGA",
+   "text": "Okay. The playbook behind our twenty-four apps. It's free. Watch.",
+   "start": 13.0,
+   "end": 15.4,
+   "card": "repo",
+   "state": {
+    "phase": "repo"
+   }
+  },
+  {
+   "id": "7",
+   "line": 7,
+   "speaker": "OMEGA",
+   "text": "Step one. Every app starts from one shell. Zero third-party packages.",
+   "start": 15.399999999999999,
+   "end": 17.799999999999997,
+   "card": "shell",
+   "state": {
+    "phase": "shell"
+   }
+  },
+  {
+   "id": "8",
+   "line": 8,
+   "speaker": "IAN",
+   "text": "Zero? Not even one little package?",
+   "start": 17.8,
+   "end": 20.2,
+   "card": "shell",
+   "state": {
+    "phase": "zero"
+   }
+  },
+  {
+   "id": "9",
+   "line": 9,
+   "speaker": "OMEGA",
+   "text": "Nothing to update. Nothing to audit. Nothing for you to break.",
+   "start": 20.2,
+   "end": 22.599999999999998,
+   "card": "shell",
+   "state": {
+    "phase": "nothing"
+   }
+  },
+  {
+   "id": "10",
+   "line": 10,
+   "speaker": "OMEGA",
+   "text": "Step two. One design file per client. Edit it, and the whole app changes.",
+   "start": 22.599999999999998,
+   "end": 24.999999999999996,
+   "card": "design",
+   "state": {
+    "phase": "tokens"
+   }
+  },
+  {
+   "id": "11",
+   "line": 11,
+   "speaker": "IAN",
+   "text": "So I make everything purple?",
+   "start": 25.0,
+   "end": 27.4,
+   "card": "design",
+   "state": {
+    "phase": "purple"
+   }
+  },
+  {
+   "id": "12",
+   "line": 12,
+   "speaker": "OMEGA",
+   "text": "Each client gets a named look. Harvest. Velour. Not purple.",
+   "start": 27.4,
+   "end": 29.799999999999997,
+   "card": "design",
+   "state": {
+    "phase": "named"
+   }
+  },
+  {
+   "id": "13",
+   "line": 13,
+   "speaker": "OMEGA",
+   "text": "Step three. It pulls what they already post. Videos. Calendars. No server.",
+   "start": 29.799999999999997,
+   "end": 32.199999999999996,
+   "card": "feed",
+   "state": {
+    "phase": "feed"
+   }
+  },
+  {
+   "id": "14",
+   "line": 14,
+   "speaker": "IAN",
+   "text": "Okay. Ship all three tonight. Skip the iPad testing.",
+   "start": 32.2,
+   "end": 34.6,
+   "card": "ipad",
+   "state": {
+    "phase": "ship"
+   }
+  },
+  {
+   "id": "15",
+   "line": 15,
+   "speaker": "OMEGA",
+   "text": "No. One stretched photo can cover the buttons on iPad. Review taps everything.",
+   "start": 34.6,
+   "end": 37.0,
+   "card": "ipad",
+   "state": {
+    "phase": "covered"
+   }
+  },
+  {
+   "id": "16",
+   "line": 16,
+   "speaker": "IAN",
+   "text": "Has that ever happened to us?",
+   "start": 37.0,
+   "end": 39.4,
+   "card": "ipad",
+   "state": {
+    "phase": "once"
+   }
+  },
+  {
+   "id": "17",
+   "line": 17,
+   "speaker": "OMEGA",
+   "text": "Once. Now every photo goes through one wrapper.",
+   "start": 39.4,
+   "end": 41.8,
+   "card": "ipad",
+   "state": {
+    "phase": "wrapper"
+   }
+  },
+  {
+   "id": "18",
+   "line": 18,
+   "speaker": "IAN",
+   "text": "Omega! The bakery loves their new app!",
+   "start": 41.8,
+   "end": 44.199999999999996,
+   "card": "rewards",
+   "state": {
+    "phase": "bakery"
+   }
+  },
+  {
+   "id": "19",
+   "line": 19,
+   "speaker": "OMEGA",
+   "text": "Ten points per dollar. Four tiers. Built for a bakery.",
+   "start": 44.199999999999996,
+   "end": 46.599999999999994,
+   "card": "rewards",
+   "state": {
+    "phase": "points"
+   }
+  },
+  {
+   "id": "20",
+   "line": 20,
+   "speaker": "IAN",
+   "text": "I added a purple mode.",
+   "start": 46.6,
+   "end": 49.0,
+   "card": "rewards",
+   "state": {
+    "phase": "kept"
+   }
+  },
+  {
+   "id": "21",
+   "line": 21,
+   "speaker": "OMEGA",
+   "text": "Delete it.",
+   "start": 49.0,
+   "end": 51.4,
+   "card": "rewards",
+   "state": {
+    "phase": "delete"
+   }
+  },
+  {
+   "id": "22",
+   "line": 22,
+   "speaker": "OMEGA",
+   "text": "Comment APPS, and I'll send you the repo.",
+   "start": 51.4,
+   "end": 53.8,
+   "card": "endcard",
+   "state": {
+    "phase": "end"
+   }
+  },
+  {
+   "id": "endcard",
+   "start": 60,
+   "end": 62,
+   "card": "endcard",
+   "state": {
+    "phase": "post"
+   }
+  }
+ ],
+ "duration": 62,
+ "note": "Placeholder times; make_timeline.py 02 writes real ones",
+ "universes": {
+  "clients": "holo",
+  "repo": "holo",
+  "shell": "silent",
+  "design": "arcade",
+  "feed": "vhs",
+  "ipad": "vhs",
+  "rewards": "holo",
+  "endcard": "holo"
+ },
+ "sfx": {
+  "clients": "notify",
+  "copy": "click",
+  "shell": "typing",
+  "zero": "ding",
+  "nothing": "strike",
+  "tokens": "typing",
+  "purple": "deny",
+  "named": "click",
+  "feed": "typing",
+  "ship": "click",
+  "covered": "alarm",
+  "bakery": "success",
+  "points": "ding",
+  "kept": "click",
+  "delete": "strike",
+  "end": "cta",
+  "post": "ding",
+  "types": "stamp"
+ }
+}

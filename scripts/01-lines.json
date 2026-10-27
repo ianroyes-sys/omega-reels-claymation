@@ -1,0 +1,164 @@
+{
+ "engine": "text2speech_v2/elevenlabs",
+ "voices": {
+  "IAN": "<IAN_VOICE_ID>",
+  "OMEGA": "<OMEGA_VOICE_ID>"
+ },
+ "lines": [
+  {
+   "n": 1,
+   "who": "IAN",
+   "text": "[excited] Omega! I applied to three hundred jobs this month."
+  },
+  {
+   "n": 2,
+   "who": "OMEGA",
+   "text": "[flatly] How many replies?"
+  },
+  {
+   "n": 3,
+   "who": "IAN",
+   "text": "[deflated] One. [reading] \"We went with someone more aligned.\""
+  },
+  {
+   "n": 4,
+   "who": "OMEGA",
+   "text": "[dry] Someone who read the job description."
+  },
+  {
+   "n": 5,
+   "who": "IAN",
+   "text": "[defensive] I read some of them."
+  },
+  {
+   "n": 6,
+   "who": "OMEGA",
+   "text": "[sighs] Okay. [warmly] I built you a job hunter. It's free. Watch."
+  },
+  {
+   "n": 7,
+   "who": "OMEGA",
+   "text": "Step one. It pulls fresh entry-level jobs from Greenhouse, Ashby, Lever, and Simplify."
+  },
+  {
+   "n": 8,
+   "who": "IAN",
+   "text": "[hopeful] So no more \"entry level, five years of experience\"?"
+  },
+  {
+   "n": 9,
+   "who": "OMEGA",
+   "text": "Filtered. It has standards. [dry] One of us should."
+  },
+  {
+   "n": 10,
+   "who": "OMEGA",
+   "text": "Step two. No duplicates. Same job, never twice."
+  },
+  {
+   "n": 11,
+   "who": "IAN",
+   "text": "[sheepish] I applied to Google four times."
+  },
+  {
+   "n": 12,
+   "who": "OMEGA",
+   "text": "[sighs] I know. [dry, amused] So does Google."
+  },
+  {
+   "n": 13,
+   "who": "OMEGA",
+   "text": "Step two. One résumé file builds every version. [firmly] Over one page, the build fails."
+  },
+  {
+   "n": 14,
+   "who": "IAN",
+   "text": "[eager] Can it add \"fast learner\" and \"team player\"?"
+  },
+  {
+   "n": 15,
+   "who": "OMEGA",
+   "text": "[deadpan] It only writes facts. That's why yours fits on one page."
+  },
+  {
+   "n": 16,
+   "who": "OMEGA",
+   "text": "Step three. Claude Code agents apply in a real browser while you sleep."
+  },
+  {
+   "n": 17,
+   "who": "IAN",
+   "text": "[curious] How do I know it actually sent?"
+  },
+  {
+   "n": 18,
+   "who": "OMEGA",
+   "text": "No screenshot, no confirmation, it doesn't count. It keeps receipts. [pointedly] You should try it."
+  },
+  {
+   "n": 19,
+   "who": "IAN",
+   "text": "[excited] Okay. Run it on every job. Use my card for the application fees."
+  },
+  {
+   "n": 20,
+   "who": "OMEGA",
+   "text": "[firmly] No. It never pays fees. Never solves a CAPTCHA. [dry] And a file called STOP freezes everything."
+  },
+  {
+   "n": 21,
+   "who": "IAN",
+   "text": "[confused] So what's my job?"
+  },
+  {
+   "n": 22,
+   "who": "OMEGA",
+   "text": "[dry] Getting the job. [softer] I just get you in the room."
+  },
+  {
+   "n": 23,
+   "who": "IAN",
+   "text": "[shouting, excited] Omega. I got an interview!"
+  },
+  {
+   "n": 24,
+   "who": "OMEGA",
+   "text": "[smug] I know. I drafted your thank-you email."
+  },
+  {
+   "n": 25,
+   "who": "IAN",
+   "text": "[excited] Send it!"
+  },
+  {
+   "n": 26,
+   "who": "OMEGA",
+   "text": "[flatly] I draft. You send. [dry] I'm not doing the interview either."
+  },
+  {
+   "n": 27,
+   "who": "OMEGA",
+   "text": "Comment HUNT, and I'll send you the repo."
+  }
+ ],
+ "title": "Opportunity Hunter",
+ "repo": "https://github.com/ianroyes-sys/opportunity-hunter-engine",
+ "word": "HUNT",
+ "skip": [
+  5,
+  10,
+  11,
+  12,
+  17,
+  18,
+  21,
+  22
+ ],
+ "beats": {
+  "4": 0.2,
+  "15": 0.2,
+  "23": 0.45,
+  "26": 0.2,
+  "27": 0.3
+ }
+}

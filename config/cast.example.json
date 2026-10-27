@@ -1,0 +1,20 @@
+{
+  "_comment": "Copy to config/cast.json (gitignored) and fill in your own Higgsfield ids. The skill reads these at the voice and ian stages.",
+  "higgsfield": {
+    "ian_sheet_id": "",
+    "ian_keyframe_id": "",
+    "omega_sheet_id": "",
+    "omega_keyframes": {
+      "close-neutral": "",
+      "close-folded": "",
+      "close-present": "",
+      "close-hips": "",
+      "wide": ""
+    }
+  },
+  "voices": {
+    "engine": "text2speech_v2/elevenlabs",
+    "IAN": "",
+    "OMEGA": ""
+  }
+}

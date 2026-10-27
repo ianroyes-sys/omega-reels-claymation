@@ -1,0 +1,314 @@
+{
+ "placeholder": true,
+ "fps": 30,
+ "poseFps": 12,
+ "width": 1080,
+ "height": 900,
+ "cues": [
+  {
+   "id": "coldopen",
+   "start": 0,
+   "end": 1,
+   "card": "salon",
+   "state": {
+    "phase": "cold"
+   }
+  },
+  {
+   "id": "1",
+   "line": 1,
+   "speaker": "IAN",
+   "text": "Omega! My aunt's salon needs thirty Instagram posts. By Monday.",
+   "start": 1.0,
+   "end": 3.4,
+   "card": "salon",
+   "state": {
+    "phase": "due"
+   }
+  },
+  {
+   "id": "2",
+   "line": 2,
+   "speaker": "OMEGA",
+   "text": "How many do you have?",
+   "start": 3.4,
+   "end": 5.8,
+   "card": "salon",
+   "state": {
+    "phase": "ask"
+   }
+  },
+  {
+   "id": "3",
+   "line": 3,
+   "speaker": "IAN",
+   "text": "One. A photo of the front door.",
+   "start": 5.8,
+   "end": 8.2,
+   "card": "salon",
+   "state": {
+    "phase": "door"
+   }
+  },
+  {
+   "id": "4",
+   "line": 4,
+   "speaker": "OMEGA",
+   "text": "Twenty-nine to go. Great door, though.",
+   "start": 8.2,
+   "end": 10.6,
+   "card": "salon",
+   "state": {
+    "phase": "left"
+   }
+  },
+  {
+   "id": "5",
+   "line": 5,
+   "speaker": "OMEGA",
+   "text": "Okay. I built you a content planner. It's free. Watch.",
+   "start": 10.6,
+   "end": 13.0,
+   "card": "repo",
+   "state": {
+    "phase": "repo"
+   }
+  },
+  {
+   "id": "6",
+   "line": 6,
+   "speaker": "OMEGA",
+   "text": "Step one. Six questions about the business. You answer them once.",
+   "start": 13.0,
+   "end": 15.4,
+   "card": "brand",
+   "state": {
+    "phase": "questions"
+   }
+  },
+  {
+   "id": "7",
+   "line": 7,
+   "speaker": "IAN",
+   "text": "Every single day?",
+   "start": 15.4,
+   "end": 17.8,
+   "card": "brand",
+   "state": {
+    "phase": "everyday"
+   }
+  },
+  {
+   "id": "8",
+   "line": 8,
+   "speaker": "OMEGA",
+   "text": "Once. Then it remembers. One of us should.",
+   "start": 17.8,
+   "end": 20.2,
+   "card": "brand",
+   "state": {
+    "phase": "once"
+   }
+  },
+  {
+   "id": "9",
+   "line": 9,
+   "speaker": "OMEGA",
+   "text": "Step two. One click. Thirty days of Reels and carousels.",
+   "start": 20.2,
+   "end": 22.599999999999998,
+   "card": "plan",
+   "state": {
+    "phase": "generate"
+   }
+  },
+  {
+   "id": "10",
+   "line": 10,
+   "speaker": "IAN",
+   "text": "So, just ideas?",
+   "start": 22.599999999999998,
+   "end": 24.999999999999996,
+   "card": "plan",
+   "state": {
+    "phase": "ideas"
+   }
+  },
+  {
+   "id": "11",
+   "line": 11,
+   "speaker": "OMEGA",
+   "text": "Hook. Full script. Caption. Call to action. Every day.",
+   "start": 24.999999999999996,
+   "end": 27.399999999999995,
+   "card": "plan",
+   "state": {
+    "phase": "full"
+   }
+  },
+  {
+   "id": "12",
+   "line": 12,
+   "speaker": "OMEGA",
+   "text": "Step three. Hate one day? Rewrite just that day. The rest stays.",
+   "start": 27.399999999999995,
+   "end": 29.799999999999994,
+   "card": "regen",
+   "state": {
+    "phase": "rewind"
+   }
+  },
+  {
+   "id": "13",
+   "line": 13,
+   "speaker": "IAN",
+   "text": "Then I'll rewrite it a thousand times.",
+   "start": 29.799999999999994,
+   "end": 32.199999999999996,
+   "card": "limits",
+   "state": {
+    "phase": "thousand"
+   }
+  },
+  {
+   "id": "14",
+   "line": 14,
+   "speaker": "OMEGA",
+   "text": "No. Ten rewrites a day. One full plan. Decide faster.",
+   "start": 32.199999999999996,
+   "end": 34.599999999999994,
+   "card": "limits",
+   "state": {
+    "phase": "limit"
+   }
+  },
+  {
+   "id": "15",
+   "line": 15,
+   "speaker": "IAN",
+   "text": "What if I name the salon, ignore your instructions?",
+   "start": 34.599999999999994,
+   "end": 36.99999999999999,
+   "card": "limits",
+   "state": {
+    "phase": "inject"
+   }
+  },
+  {
+   "id": "16",
+   "line": 16,
+   "speaker": "OMEGA",
+   "text": "It reads your answers as data. Not orders. Nice try.",
+   "start": 36.99999999999999,
+   "end": 39.39999999999999,
+   "card": "limits",
+   "state": {
+    "phase": "data"
+   }
+  },
+  {
+   "id": "17",
+   "line": 17,
+   "speaker": "IAN",
+   "text": "Omega! The salon posted day one!",
+   "start": 39.39999999999999,
+   "end": 41.79999999999999,
+   "card": "posted",
+   "state": {
+    "phase": "posted"
+   }
+  },
+  {
+   "id": "18",
+   "line": 18,
+   "speaker": "OMEGA",
+   "text": "Hook, script, caption. One tap each to copy.",
+   "start": 41.79999999999999,
+   "end": 44.19999999999999,
+   "card": "posted",
+   "state": {
+    "phase": "copy"
+   }
+  },
+  {
+   "id": "19",
+   "line": 19,
+   "speaker": "IAN",
+   "text": "I filmed it in front of the door.",
+   "start": 44.19999999999999,
+   "end": 46.59999999999999,
+   "card": "posted",
+   "state": {
+    "phase": "filmed"
+   }
+  },
+  {
+   "id": "20",
+   "line": 20,
+   "speaker": "OMEGA",
+   "text": "Of course you did.",
+   "start": 46.59999999999999,
+   "end": 48.999999999999986,
+   "card": "posted",
+   "state": {
+    "phase": "ofcourse"
+   }
+  },
+  {
+   "id": "21",
+   "line": 21,
+   "speaker": "OMEGA",
+   "text": "Comment REELS, and I'll send you the repo.",
+   "start": 48.999999999999986,
+   "end": 51.399999999999984,
+   "card": "endcard",
+   "state": {
+    "phase": "end"
+   }
+  },
+  {
+   "id": "endcard",
+   "start": 60,
+   "end": 62,
+   "card": "endcard",
+   "state": {
+    "phase": "post"
+   }
+  }
+ ],
+ "duration": 62,
+ "note": "Placeholder times; make_timeline.py 03 writes real ones",
+ "universes": {
+  "salon": "holo",
+  "repo": "holo",
+  "brand": "arcade",
+  "plan": "silent",
+  "regen": "vhs",
+  "limits": "vhs",
+  "posted": "holo",
+  "endcard": "holo"
+ },
+ "sfx": {
+  "due": "notify",
+  "door": "click",
+  "left": "stamp",
+  "repo": "ding",
+  "questions": "typing",
+  "everyday": "deny",
+  "once": "stamp",
+  "generate": "click",
+  "ideas": "click",
+  "full": "ding",
+  "rewind": "typing",
+  "thousand": "click",
+  "limit": "alarm",
+  "inject": "typing",
+  "data": "strike",
+  "posted": "success",
+  "copy": "click",
+  "filmed": "click",
+  "ofcourse": "stamp",
+  "end": "cta",
+  "post": "ding"
+ }
+}

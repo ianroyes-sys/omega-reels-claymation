@@ -1,0 +1,136 @@
+{
+ "title": "iOS App Portfolio",
+ "repo": "https://github.com/ianroyes-sys/ios-app-portfolio",
+ "word": "APPS",
+ "engine": "text2speech_v2/elevenlabs",
+ "voices": {
+  "IAN": "<IAN_VOICE_ID>",
+  "OMEGA": "<OMEGA_VOICE_ID>"
+ },
+ "lines": [
+  {
+   "n": 1,
+   "who": "IAN",
+   "text": "[excited] Omega! Three new clients want iPhone apps. Same week."
+  },
+  {
+   "n": 2,
+   "who": "OMEGA",
+   "text": "[flatly] And your plan?"
+  },
+  {
+   "n": 3,
+   "who": "IAN",
+   "text": "[proudly] Copy the last app. Change the logo."
+  },
+  {
+   "n": 4,
+   "who": "OMEGA",
+   "text": "[dry] A church, a dentist and a bakery. [smug] One app."
+  },
+  {
+   "n": 5,
+   "who": "IAN",
+   "text": "[defensive] People like sermons."
+  },
+  {
+   "n": 6,
+   "who": "OMEGA",
+   "text": "[sighs] Okay. [warmly] The playbook behind our twenty-four apps. It's free. Watch."
+  },
+  {
+   "n": 7,
+   "who": "OMEGA",
+   "text": "Step one. Every app starts from one shell. Zero third-party packages."
+  },
+  {
+   "n": 8,
+   "who": "IAN",
+   "text": "[hopeful] Zero? Not even one little package?"
+  },
+  {
+   "n": 9,
+   "who": "OMEGA",
+   "text": "[dry] Nothing to update. Nothing to audit. [smug] Nothing for you to break."
+  },
+  {
+   "n": 10,
+   "who": "OMEGA",
+   "text": "Step two. One design file per client. Edit it, and the whole app changes."
+  },
+  {
+   "n": 11,
+   "who": "IAN",
+   "text": "[eager] So I make everything purple?"
+  },
+  {
+   "n": 12,
+   "who": "OMEGA",
+   "text": "[deadpan] Each client gets a named look. Harvest. Velour. [dry] Not purple."
+  },
+  {
+   "n": 13,
+   "who": "OMEGA",
+   "text": "Step three. It pulls what they already post. Videos. Calendars. No server."
+  },
+  {
+   "n": 14,
+   "who": "IAN",
+   "text": "[excited] Okay. Ship all three tonight. Skip the iPad testing."
+  },
+  {
+   "n": 15,
+   "who": "OMEGA",
+   "text": "[firmly] No. One stretched photo can cover the buttons on iPad. [dry] Review taps everything."
+  },
+  {
+   "n": 16,
+   "who": "IAN",
+   "text": "[sheepish] Has that ever happened to us?"
+  },
+  {
+   "n": 17,
+   "who": "OMEGA",
+   "text": "[dry] Once. [firmly] Now every photo goes through one wrapper."
+  },
+  {
+   "n": 18,
+   "who": "IAN",
+   "text": "[excited] Omega! The bakery loves their new app!"
+  },
+  {
+   "n": 19,
+   "who": "OMEGA",
+   "text": "[smug] Ten points per dollar. Four tiers. [dry] Built for a bakery."
+  },
+  {
+   "n": 20,
+   "who": "IAN",
+   "text": "[quietly] I added a purple mode."
+  },
+  {
+   "n": 21,
+   "who": "OMEGA",
+   "text": "[flatly] Delete it."
+  },
+  {
+   "n": 22,
+   "who": "OMEGA",
+   "text": "Comment APPS, and I'll send you the repo."
+  }
+ ],
+ "skip": [
+  5,
+  16,
+  17
+ ],
+ "beats": {
+  "4": 0.2,
+  "9": 0.15,
+  "12": 0.15,
+  "18": 0.4,
+  "20": 0.35,
+  "21": 0.3,
+  "22": 0.3
+ }
+}

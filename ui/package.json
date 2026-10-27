@@ -1,0 +1,12 @@
+{
+  "name": "omega-reels-ui",
+  "private": true,
+  "description": "Renders the top-half UI card track of a reel, frame by frame, with Playwright",
+  "type": "module",
+  "scripts": {
+    "stills": "node render.mjs reels/01.timeline.json --stills 3,12,24,40,60 --reel 01 --outdir stills"
+  },
+  "devDependencies": {
+    "playwright": "^1.64.1"
+  }
+}

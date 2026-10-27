@@ -1,0 +1,53 @@
+# Omega reel: build a scripted, voiced reel into the finished Clay Multiverse cut, wait for Ian, then package it.
+# The creative stages (script, voices, Ian's lip-sync shots) run in Claude Code with the omega-reel skill
+# ("make the reel for <repo>, keyword WORD"); this DAG takes over from there. Nothing is ever posted.
+# Project: this repo. Set P to wherever you cloned it. Retry a failed step in the UI; earlier steps keep.
+description: Build, check and package an Ian + Omega claymation reel (grade, universe jumps, score, sound, QA)
+type: graph
+
+params:
+  - name: REEL
+    description: Two-digit reel id, e.g. 02 (needs scripts/NN-lines.json, voiced lines, Ian shots, ui/reels/NN.js)
+    required: true
+  - name: FROM
+    description: First build stage to run (audio omega ui fx sound compose qa)
+    enum: [audio, omega, ui, fx, sound, compose, qa]
+    default: audio
+
+env:
+  - P: ${HOME}/omega-reels-claymation
+  - PATH: /usr/local/bin:/opt/homebrew/bin:${HOME}/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+steps:
+  - id: build
+    working_dir: ${P}
+    run: /bin/bash scripts/build.sh "${params.REEL}" "${params.FROM}"
+    retry_policy: { limit: 1, interval_sec: 30 }
+
+  - id: approve
+    depends: [build]
+    action: human.task
+    with:
+      prompt: >-
+        Reel ${params.REEL} is built. Watch renders/${params.REEL}/ (the "NN Title.mp4" share copy)
+        and skim renders/${params.REEL}/QA.txt, qa-sheet.jpg and qa-transcript.txt. Package it for posting?
+      form:
+        type: object
+        properties:
+          decision:
+            type: string
+            enum: [package, redo]
+            default: package
+          notes:
+            type: string
+            description: What to change (for a redo)
+            default: ""
+        required: [decision]
+
+  - id: package
+    depends: [approve]
+    preconditions:
+      - condition: "${steps.approve.outputs.decision}"
+        expected: package
+    working_dir: ${P}
+    run: python3 scripts/package.py "${params.REEL}"
